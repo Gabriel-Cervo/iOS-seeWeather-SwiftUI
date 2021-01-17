@@ -14,6 +14,7 @@ struct CityTextView: View {
         Text(city)
             .font(.system(size: 32, weight: .medium, design: .default))
             .foregroundColor(.white)
+            .padding()
     }
 }
 
