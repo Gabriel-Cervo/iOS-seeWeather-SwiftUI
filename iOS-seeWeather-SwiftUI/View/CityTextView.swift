@@ -8,13 +8,17 @@
 import SwiftUI
 
 struct CityTextView: View {
+    let city: String
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text(city)
+            .font(.system(size: 32, weight: .medium, design: .default))
+            .foregroundColor(.white)
     }
 }
 
 struct CityTextView_Previews: PreviewProvider {
     static var previews: some View {
-        CityTextView()
+        CityTextView(city: "Porto Alegre")
     }
 }

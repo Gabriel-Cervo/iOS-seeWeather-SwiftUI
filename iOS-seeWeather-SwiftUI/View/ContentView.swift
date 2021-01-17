@@ -13,7 +13,9 @@ struct ContentView: View {
             BackgroundView(topColor: Color.blue, bottomColor: Color.white)
             
             VStack {
+                CityTextView(city: "Porto Alegre")
                 
+                Spacer()
             }
         }
     }

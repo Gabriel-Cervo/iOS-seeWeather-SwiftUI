@@ -11,6 +11,8 @@
 		8493057925B4EAA000A8F1E6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8493057825B4EAA000A8F1E6 /* ContentView.swift */; };
 		8493057B25B4EAA500A8F1E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8493057A25B4EAA500A8F1E6 /* Assets.xcassets */; };
 		8493057E25B4EAA500A8F1E6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8493057D25B4EAA500A8F1E6 /* Preview Assets.xcassets */; };
+		8493058725B4ECD800A8F1E6 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8493058625B4ECD800A8F1E6 /* BackgroundView.swift */; };
+		8493058B25B4EE8E00A8F1E6 /* CityTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8493058A25B4EE8E00A8F1E6 /* CityTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		8493057A25B4EAA500A8F1E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8493057D25B4EAA500A8F1E6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8493057F25B4EAA500A8F1E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8493058625B4ECD800A8F1E6 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		8493058A25B4EE8E00A8F1E6 /* CityTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +56,8 @@
 		8493057525B4EAA000A8F1E6 /* iOS-seeWeather-SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				8493058925B4EE4C00A8F1E6 /* View */,
 				8493057625B4EAA000A8F1E6 /* iOS_seeWeather_SwiftUIApp.swift */,
-				8493057825B4EAA000A8F1E6 /* ContentView.swift */,
 				8493057A25B4EAA500A8F1E6 /* Assets.xcassets */,
 				8493057F25B4EAA500A8F1E6 /* Info.plist */,
 				8493057C25B4EAA500A8F1E6 /* Preview Content */,
@@ -67,6 +71,16 @@
 				8493057D25B4EAA500A8F1E6 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8493058925B4EE4C00A8F1E6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8493058625B4ECD800A8F1E6 /* BackgroundView.swift */,
+				8493057825B4EAA000A8F1E6 /* ContentView.swift */,
+				8493058A25B4EE8E00A8F1E6 /* CityTextView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +152,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8493058725B4ECD800A8F1E6 /* BackgroundView.swift in Sources */,
 				8493057925B4EAA000A8F1E6 /* ContentView.swift in Sources */,
+				8493058B25B4EE8E00A8F1E6 /* CityTextView.swift in Sources */,
 				8493057725B4EAA000A8F1E6 /* iOS_seeWeather_SwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
