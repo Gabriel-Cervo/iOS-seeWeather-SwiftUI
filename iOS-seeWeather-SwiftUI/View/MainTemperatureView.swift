@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MainTemperatureView: View {
     let icon: String
-    let temperature: String
+    let temperature: Int
     
     var body: some View {
         VStack {
@@ -25,7 +25,7 @@ struct MainTemperatureView: View {
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 180, height: 180)
                 
-            Text(temperature)
+            Text("\(temperature)°")
                 .font(.system(size: 70, weight: .medium, design: .default))
                 .foregroundColor(.white)
         }
@@ -34,6 +34,6 @@ struct MainTemperatureView: View {
 
 struct MainTemperatureView_Previews: PreviewProvider {
     static var previews: some View {
-        MainTemperatureView(icon: "cloud.sun.fill", temperature: "32°")
+        MainTemperatureView(icon: "cloud.sun.fill", temperature: 32)
     }
 }

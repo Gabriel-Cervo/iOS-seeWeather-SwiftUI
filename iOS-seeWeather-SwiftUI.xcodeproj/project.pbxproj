@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8455DAF825B4F3D300B8D594 /* MainTemperatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8455DAF725B4F3D300B8D594 /* MainTemperatureView.swift */; };
+		8455DAFB25B4F52100B8D594 /* MiniWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8455DAFA25B4F52100B8D594 /* MiniWeatherView.swift */; };
 		8493057725B4EAA000A8F1E6 /* iOS_seeWeather_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8493057625B4EAA000A8F1E6 /* iOS_seeWeather_SwiftUIApp.swift */; };
 		8493057925B4EAA000A8F1E6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8493057825B4EAA000A8F1E6 /* ContentView.swift */; };
 		8493057B25B4EAA500A8F1E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8493057A25B4EAA500A8F1E6 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		8455DAF725B4F3D300B8D594 /* MainTemperatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTemperatureView.swift; sourceTree = "<group>"; };
+		8455DAFA25B4F52100B8D594 /* MiniWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniWeatherView.swift; sourceTree = "<group>"; };
 		8493057325B4EAA000A8F1E6 /* iOS-seeWeather-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-seeWeather-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8493057625B4EAA000A8F1E6 /* iOS_seeWeather_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_seeWeather_SwiftUIApp.swift; sourceTree = "<group>"; };
 		8493057825B4EAA000A8F1E6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				8493057825B4EAA000A8F1E6 /* ContentView.swift */,
 				8493058A25B4EE8E00A8F1E6 /* CityTextView.swift */,
 				8455DAF725B4F3D300B8D594 /* MainTemperatureView.swift */,
+				8455DAFA25B4F52100B8D594 /* MiniWeatherView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -159,6 +162,7 @@
 				8455DAF825B4F3D300B8D594 /* MainTemperatureView.swift in Sources */,
 				8493057925B4EAA000A8F1E6 /* ContentView.swift in Sources */,
 				8493058B25B4EE8E00A8F1E6 /* CityTextView.swift in Sources */,
+				8455DAFB25B4F52100B8D594 /* MiniWeatherView.swift in Sources */,
 				8493057725B4EAA000A8F1E6 /* iOS_seeWeather_SwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

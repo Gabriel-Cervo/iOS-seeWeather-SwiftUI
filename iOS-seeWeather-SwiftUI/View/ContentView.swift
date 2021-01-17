@@ -15,9 +15,7 @@ struct ContentView: View {
             VStack {
                 CityTextView(city: "Porto Alegre")
                 
-                VStack(spacing: 8) {
-                    MainTemperatureView(icon: "cloud.sun.fill", temperature: "32°")
-                }
+                MainTemperatureView(icon: "cloud.sun.fill", temperature: 32)
                 
                 Spacer()
             }
