@@ -14,7 +14,7 @@ struct NextDaysRowView: View {
             MiniWeatherView(dayOfWeek: "QUI", icon: "sun.max.fill", temperature: 31)
             MiniWeatherView(dayOfWeek: "SEX", icon: "cloud.fill", temperature: 28)
             MiniWeatherView(dayOfWeek: "SAB", icon: "cloud.rain.fill", temperature: 26)
-            
+            MiniWeatherView(dayOfWeek: "DOM", icon: "cloud.rain.fill", temperature: 24)
         }
     }
 }
