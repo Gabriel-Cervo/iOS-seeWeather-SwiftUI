@@ -15,18 +15,18 @@ struct MiniWeatherView: View {
     var body: some View {
         VStack {
             Text(dayOfWeek)
-                .font(.system(size: 18, weight: .medium, design: .default))
+                .font(.system(size: 15, weight: .medium, design: .default))
                 .foregroundColor(.white)
             
             Image(systemName: icon)
                 .renderingMode(.original)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(width: 50, height: 50)
+                .frame(width: 35, height: 35)
                 .padding()
             
             Text("\(temperature)°")
-                .font(.system(size: 20, weight: .medium, design: .default))
+                .font(.system(size: 17, weight: .medium, design: .default))
                 .foregroundColor(.white)
         }
     }

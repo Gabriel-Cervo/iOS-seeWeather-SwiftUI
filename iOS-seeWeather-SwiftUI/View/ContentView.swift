@@ -8,14 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var isDarkMode: Bool = false
+    
     var body: some View {
         ZStack {
             BackgroundView(topColor: Color.blue, bottomColor: Color.white)
             
             VStack {
-                CityTextView(city: "Porto Alegre")
+                CityTextView(city: "Porto Alegre, RS")
                 
-                MainTemperatureView(icon: "cloud.sun.fill", temperature: 32)
+                MainTemperatureView(icon: isDarkMode ? "moon.stars.fill" : "cloud.sun.fill", temperature: 27)
+                    .padding(.bottom, 60)
+                
+                NextDaysRowView()
+                
+                Spacer()
+                
+                ButtonView()
                 
                 Spacer()
             }
