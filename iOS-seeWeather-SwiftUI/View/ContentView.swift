@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var isDarkMode: Bool = false
+    @State private var isDarkMode = false
     
     var body: some View {
         ZStack {
-            BackgroundView(topColor: Color.blue, bottomColor: Color.white)
+            BackgroundView(isDarkMode: $isDarkMode, topColor: Color.blue, bottomColor: Color.white)
             
             VStack {
                 CityTextView(city: "Porto Alegre, RS")
@@ -24,7 +24,7 @@ struct ContentView: View {
                 
                 Spacer()
                 
-                ButtonView()
+                ButtonView(isDarkMode: $isDarkMode)
                 
                 Spacer()
             }

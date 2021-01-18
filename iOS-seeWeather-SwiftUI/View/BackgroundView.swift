@@ -15,15 +15,15 @@ struct BackgroundView: View {
     
     var body: some View {
         LinearGradient(gradient: isDarkMode ?
-            Gradient(colors: [topColor, bottomColor])
-            :
-            Gradient(colors: [topColor, bottomColor]), startPoint: .topLeading, endPoint: .bottomLeading)
+                        Gradient(colors: [Color.black, Color.gray])
+                        :
+                        Gradient(colors: [topColor, bottomColor]), startPoint: .topLeading, endPoint: .bottomLeading)
             .edgesIgnoringSafeArea(.all)
     }
 }
 
-struct BackgroundView_Previews: PreviewProvider {
-    static var previews: some View {
-//        BackgroundView(isDarkMode: Binding(true)!, topColor: Color.blue,  bottomColor: Color.white)
-    }
-}
+//struct BackgroundView_Previews: PreviewProvider {
+//    static var previews: some View {
+////        BackgroundView(isDarkMode: Binding(true)!, topColor: Color.blue,  bottomColor: Color.white)
+//    }
+//}

@@ -8,23 +8,25 @@
 import SwiftUI
 
 struct ButtonView: View {
+    @Binding var isDarkMode: Bool
+    
     var body: some View {
         Button {
-            print("tapped")
+            isDarkMode.toggle()
         } label: {
-            Text("Dark mode")
+            Text(isDarkMode ? "Light Mode" : "Dark mode")
                 .frame(width: 180, height: 50)
                 .font(.system(size: 18, weight: .bold, design: .default))
-                .foregroundColor(Color.black)
-                .background(Color.white)
+                .foregroundColor(isDarkMode ? Color.white : Color.black)
+                .background(isDarkMode ? Color.black : Color.white)
                 .cornerRadius(10)
                 
         }
     }
 }
 
-struct ButtonView_Previews: PreviewProvider {
-    static var previews: some View {
-        ButtonView()
-    }
-}
+//struct ButtonView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ButtonView()
+//    }
+//}
