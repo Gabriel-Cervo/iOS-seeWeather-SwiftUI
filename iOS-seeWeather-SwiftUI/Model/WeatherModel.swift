@@ -8,20 +8,21 @@
 import Foundation
 
 struct WeatherModel: Codable {
-    let list: [ListModel]
+    var list: [ListModel]
 }
 
 struct ListModel: Codable {
-    let dt: Int
-    let main: MainModel
-    let weather: [WeatherSubInfoModel]
+    var dt: Int
+    var main: MainModel
+    var weather: [WeatherSubInfoModel]
 }
 
 struct MainModel: Codable {
-    let temp: Double
+    var temp: Double
 }
 
 struct WeatherSubInfoModel: Codable {
-    let id: Int
-    let main: String
+    var id: Int
+    var main: String
+    var icon: String
 }
