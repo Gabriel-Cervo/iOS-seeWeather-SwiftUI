@@ -9,6 +9,8 @@ import Foundation
 
 /**
 Codigo para leitura de uma Plist (array)
+
+Primeiro pega o caminho para plist, deserializa a data a partir do codigo xml da plist e transforma os dados em um array de strings
  */
 
 func getPlistItem(withName name: String) -> [String]? {
