@@ -12,17 +12,21 @@ struct WeatherModel: Codable {
     var city: CityModel
 }
 
-struct ListModel: Codable {
+struct ListModel: Codable, Hashable {
+    static func == (lhs: ListModel, rhs: ListModel) -> Bool {
+        return lhs.weather[0].id == rhs.weather[0].id
+    }
+    
     var dt: Int
     var main: MainModel
     var weather: [WeatherSubInfoModel]
 }
 
-struct MainModel: Codable {
+struct MainModel: Codable, Hashable {
     var temp: Double
 }
 
-struct WeatherSubInfoModel: Codable {
+struct WeatherSubInfoModel: Codable, Hashable {
     var id: Int
     var main: String
     var icon: String

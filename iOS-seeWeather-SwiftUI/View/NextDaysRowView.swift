@@ -9,13 +9,13 @@ import SwiftUI
 
 struct NextDaysRowView: View {
     @Binding var weatherPreview: WeatherModel?
-    
+        
     var body: some View {
-        HStack() {
-            ForEach((1...5), id: \.self) {
-                let day = weatherPreview!.list[$0]
-                
-                MiniWeatherView(hourOfDay: formatDtIntoDayHour(day.dt), icon: "cloud.fill", temperature: Int(day.main.temp))
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack(spacing: 5) {
+                ForEach(weatherPreview!.list, id: \.self.weather[0].id) { day in
+                    MiniWeatherView(hourOfDay: formatDtIntoDayHour(day.dt), icon: "cloud.fill", temperature: Int(day.main.temp))
+                }
             }
         }
     }
