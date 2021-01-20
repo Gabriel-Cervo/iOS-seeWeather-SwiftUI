@@ -18,12 +18,12 @@ struct ContentView: View {
             BackgroundView(isDarkMode: $isDarkMode, topColor: Color.blue, bottomColor: Color.white)
             
             VStack {
-                CityTextView(city: "Porto Alegre, RS")
+                CityTextView(city: weatherPreview == nil ? "Carregando" : "\(weatherPreview!.city.name), \(weatherPreview!.city.country)")
                 
-                MainTemperatureView(icon: isDarkMode ? "moon.stars.fill" : "cloud.sun.fill", temperature: 27)
+                MainTemperatureView(icon: isDarkMode ? "moon.stars.fill" : "cloud.sun.fill", temperature: weatherPreview == nil ? 0 : Int(weatherPreview!.list.first!.main.temp))
                     .padding(.bottom, 60)
                 
-                NextDaysRowView()
+                NextDaysRowView(weatherPreview: $weatherPreview)
                 
                 Spacer()
                 
