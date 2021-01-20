@@ -36,6 +36,7 @@ struct ContentView: View {
         }.onAppear {
             Api().getWeather(apiKey: apiKey![0]) { weatherPreview in
                 self.weatherPreview = weatherPreview
+                print(weatherPreview.list)
             }
         }
     }

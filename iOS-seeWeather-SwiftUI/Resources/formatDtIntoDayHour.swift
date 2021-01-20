@@ -10,14 +10,13 @@ import Foundation
 func formatDtIntoDayHour(_ dt: Int) -> String {
     let timeInterval = Double(dt)
     let dateInNS = Date(timeIntervalSince1970: timeInterval)
-    print(dateInNS)
     
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = "HH"
     
     let dayHour = dateFormatter.string(from: dateInNS)
     
-    return dayHour
+    return String(Int(dayHour)! + 3)
 }
 
 /** Codigo para formatar string, caso seja necessario futuramente...

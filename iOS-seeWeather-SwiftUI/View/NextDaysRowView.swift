@@ -13,8 +13,8 @@ struct NextDaysRowView: View {
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 5) {
-                ForEach(weatherPreview!.list, id: \.self.weather[0].id) { day in
-                    MiniWeatherView(hourOfDay: formatDtIntoDayHour(day.dt), icon: "cloud.fill", temperature: Int(day.main.temp))
+                ForEach(weatherPreview!.list, id: \.self.weather[0].id) { hour in
+                    MiniWeatherView(hourOfDay: formatDtIntoDayHour(hour.dt), icon: "cloud.fill", temperature: Int(hour.main.temp))
                 }
             }
         }
