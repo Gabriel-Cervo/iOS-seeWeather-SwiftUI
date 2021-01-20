@@ -15,7 +15,7 @@ struct NextDaysRowView: View {
             ForEach((1...5), id: \.self) {
                 let day = weatherPreview!.list[$0]
                 
-                MiniWeatherView(dayOfWeek: formatDate(day.dt), icon: "cloud.fill", temperature: Int(day.main.temp))
+                MiniWeatherView(hourOfDay: formatDtIntoDayHour(day.dt), icon: "cloud.fill", temperature: Int(day.main.temp))
             }
         }
     }
