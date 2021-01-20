@@ -23,7 +23,9 @@ struct ContentView: View {
                 MainTemperatureView(icon: isDarkMode ? "moon.stars.fill" : "cloud.sun.fill", temperature: weatherPreview == nil ? 0 : Int(weatherPreview!.list.first!.main.temp))
                     .padding(.bottom, 60)
                 
-                NextDaysRowView(weatherPreview: $weatherPreview)
+                if weatherPreview != nil {
+                    NextDaysRowView(weatherPreview: $weatherPreview)  
+                }
                 
                 Spacer()
                 

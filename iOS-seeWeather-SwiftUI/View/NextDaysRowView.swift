@@ -12,21 +12,17 @@ struct NextDaysRowView: View {
     
     var body: some View {
         HStack() {
-            if weatherPreview != nil {
-                List(weatherPreview!.list, id: \.self.weather.id) { weather in
-                    MiniWeatherView(dayOfWeek: "QUA", icon: "sun.max.fill", temperature: 32)
-                }
-                MiniWeatherView(dayOfWeek: "QUI", icon: "sun.max.fill", temperature: 31)
-                MiniWeatherView(dayOfWeek: "SEX", icon: "cloud.fill", temperature: 28)
-                MiniWeatherView(dayOfWeek: "SAB", icon: "cloud.rain.fill", temperature: 26)
-                MiniWeatherView(dayOfWeek: "DOM", icon: "cloud.rain.fill", temperature: 24)
+            ForEach((1...5), id: \.self) {
+                let day = weatherPreview!.list[$0]
+                
+                MiniWeatherView(dayOfWeek: formatDate(day.dt), icon: "cloud.fill", temperature: Int(day.main.temp))
             }
         }
     }
 }
-
-struct NextDaysRowView_Previews: PreviewProvider {
-    static var previews: some View {
-        NextDaysRowView()
-    }
-}
+//
+//struct NextDaysRowView_Previews: PreviewProvider {
+//    static var previews: some View {
+////        NextDaysRowView()
+//    }
+//}
