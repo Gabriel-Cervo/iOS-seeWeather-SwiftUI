@@ -9,6 +9,7 @@ import Foundation
 
 struct WeatherModel: Codable {
     var list: [ListModel]
+    var city: CityModel
 }
 
 struct ListModel: Codable {
@@ -25,4 +26,9 @@ struct WeatherSubInfoModel: Codable {
     var id: Int
     var main: String
     var icon: String
+}
+
+struct CityModel: Codable {
+    var name: String
+    var country: String
 }

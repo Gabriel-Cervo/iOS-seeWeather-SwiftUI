@@ -27,8 +27,8 @@
             filePath = "iOS-seeWeather-SwiftUI/Resources/getPlist.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
             landmarkName = "getPlistItem(withName:)"
             landmarkType = "9">
          </BreakpointContent>

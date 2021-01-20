@@ -18,6 +18,7 @@ func getPlistItem(withName name: String) -> [String]? {
         print("[ERROR]: Cannot find a Plist with the specified path.")
         return nil
     }
+    
     guard let xml = FileManager.default.contents(atPath: path) else {
         print("[ERROR]: Deserializing data from xml failed.")
         return nil

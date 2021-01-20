@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     let apiKey = getPlistItem(withName: "Keys")
     
+    @State private var weatherPreview: WeatherModel? = nil
     @State private var isDarkMode = false
     
     var body: some View {
@@ -31,7 +32,9 @@ struct ContentView: View {
                 Spacer()
             }
         }.onAppear {
-            Api().getWeather(apiKey![0])
+            Api().getWeather(apiKey: apiKey![0]) { weatherPreview in
+                self.weatherPreview = weatherPreview
+            }
         }
     }
 }

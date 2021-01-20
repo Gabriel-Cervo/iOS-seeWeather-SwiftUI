@@ -8,7 +8,7 @@
 import Foundation
 
 class Api {
-    func getWeather(_ apiKey: String) -> Void {
+    func getWeather(apiKey: String, onComplete: @escaping (WeatherModel) -> ()) -> Void {
         guard let url = URL(string: "https://api.openweathermap.org/data/2.5/forecast?lat=-30.1084983&lon=-51.3175712&units=metric&appid=\(apiKey)") else {
             print("Error on constructing the string into a url")
             return
@@ -20,7 +20,10 @@ class Api {
             }
             
             let weather = try! JSONDecoder().decode(WeatherModel.self, from: data!)
-            print(weather)
+            
+            DispatchQueue.main.async {
+                onComplete(weather)
+            }
         }
         .resume()
     }
